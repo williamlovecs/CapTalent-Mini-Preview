@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#eceef2" />
+    <title>CapTalent 锴才 · Mini（合成演示）</title>
+    <script>
+      /* 防首屏闪色：渲染前落定主题（localStorage > 系统偏好 > 白天） */
+      try {
+        var t = localStorage.getItem("captalent-theme");
+        var dark = matchMedia("(prefers-color-scheme: dark)").matches;
+        var eff = t === "day" || t === "night" ? t : dark ? "night" : "day";
+        document.documentElement.dataset.theme = eff;
+        document
+          .querySelector('meta[name="theme-color"]')
+          .setAttribute("content", eff === "night" ? "#0b0e13" : "#eceef2");
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-CL_M2Hc-.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DdfdaOKe.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
